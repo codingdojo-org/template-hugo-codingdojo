@@ -3,7 +3,13 @@
 {{ partial "head" . }}
 <body>
   {{ partial "header" . }}
-  <article>
-    {{ .Content }}
+  <article class="page">
+    <div class="content">
+    {{ range .Data.Pages }}
+      {{if eq .Type "index" }}
+        {{.Content}}
+      {{end}}
+    {{ end }}
+  </div>
   </article>
 </body>
