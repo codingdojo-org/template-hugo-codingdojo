@@ -108,6 +108,11 @@ article.page .content {
   max-width: 600px;
 }
 
+.article-footer {
+  width: 100%;
+  text-align: right;
+}
+
 @media all and (max-width: 800px) {
   article.page .content {
     width: 80%;
