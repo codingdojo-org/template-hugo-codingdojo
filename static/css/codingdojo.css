@@ -118,3 +118,9 @@ article.page .content {
     width: 80%;
   }
 }
+
+article.page pre {
+  background-color: #e7e7e7;
+  padding: 16px;
+  border-radius: 3px;
+}
