@@ -19,7 +19,8 @@ a {
   line-height: 2em;
   text-decoration: none;
   padding: 10px;
-  border-radius: 3px;
+  font-weight: 400;
+  border-radius: 5px;
 }
 
 /***************** cards layout ***********************/
@@ -105,6 +106,7 @@ header.top h1 a {
   transform: rotate(45deg);
 }
 
+
 .ribbon {
   font-family: 'Open Sans Condensed', sans-serif;
   background-color: #C66;
@@ -113,7 +115,7 @@ header.top h1 a {
   height:34px;
   line-height:30px;
   text-align:center;
-  
+
 }
 
 .seams {
@@ -124,7 +126,7 @@ header.top h1 a {
 
 .ribbon  a {
   font-size: 1.0em;
-  letter-spacing: 0.12em; 
+  letter-spacing: 0.12em;
   text-shadow: 0 -1px #777;
   text-decoration: none;
   text-align: center;
@@ -132,7 +134,7 @@ header.top h1 a {
 }
 
 .gradient {
- 
+
   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.48), transparent);
   background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.34), transparent);
   background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.35), transparent);
@@ -140,7 +142,7 @@ header.top h1 a {
   background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.35), transparent);
   background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.35), transparent);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#000000');
-  
+
 }
 
 
@@ -163,14 +165,41 @@ article.page .content {
   text-align: right;
 }
 
-@media all and (max-width: 800px) {
-  article.page .content {
-    width: 80%;
-  }
-}
-
 article.page pre {
   background-color: #e7e7e7;
   padding: 16px;
   border-radius: 3px;
+}
+
+
+@media all and (max-width: 600px) {
+  body {
+    text-overflow: ellipsis;;
+    overflow-wrap: break-word;
+    max-width:100%;
+  }
+
+  header.top {
+    flex-direction: column;
+    padding-left: 0px;
+    padding-right: 0px;
+
+  }
+
+  .top-right-corner {
+    position: relative;
+    top:0;
+    right:0px;
+    transform:none;
+  }
+  .ribbon {
+    width:100%;
+  }
+  .seams {
+    border-right:0px;
+    border-left:0px;
+  }
+  article.page .content {
+    width: 80%;
+  }
 }
