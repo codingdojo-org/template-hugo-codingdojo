@@ -1,3 +1,2 @@
 workspace:
-- page liste: http://jsbin.com/sukaya/edit?html,css,output
-
+- test live design for list page: http://jsbin.com/sukaya/edit?html,css,output
