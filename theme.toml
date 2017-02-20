@@ -3,9 +3,9 @@
 
 name = "Template Hugo Codingdojo"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+licenselink = "https://github.com/codingdojo-org/template-hugo-codingdojo/blob/master/LICENSE.md"
 description = ""
-homepage = "http://siteforthistheme.com/"
+homepage = "http://codingdojo.org"
 tags = ["", ""]
 features = ["", ""]
 min_version = 0.18
