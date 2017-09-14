@@ -5,6 +5,11 @@
   {{ partial "header" . }}
   <article class="page">
     <div class="content">
+      <h1>
+        {{ .Title | markdownify }}
+        {{ with .Params.subtitle }}<br/><small>{{ . }}</small>{{ end }}
+      </h1>
+
       {{ .Content }}
       <div class="article-footer">
         <a class="button" href="https://github.com/codingdojo-org/codingdojo.org/edit/master/content/{{ .File.Path }} ">Edit</a>
