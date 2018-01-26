@@ -1,0 +1,10 @@
+<footer class="bottom">
+  <nav>
+    <ul>
+
+      {{ range $.Site.Home.AllTranslations }}
+      <li><a href="{{ .LanguagePrefix }}/">{{ .Lang }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+</footer>

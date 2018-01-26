@@ -172,6 +172,45 @@ article.page pre {
   border-radius: 3px;
 }
 
+/************** footer nav ***************************/
+footer.bottom {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333333;
+  color: #f2f3f4;
+  font-family:'Oswald', sans-serif
+}
+
+footer.bottom nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+footer.bottom nav ul li {
+  padding: 10px;
+  margin-right: 5px;
+}
+
+footer.bottom nav ul li:hover {
+  background-color: #34495e;
+}
+
+footer.bottom nav ul li a {
+  color: #f2f3f4;
+}
+
+footer.bottom h1 a {
+  color: #f2f3f4;
+  text-decoration: none;
+}
 
 @media all and (max-width: 600px) {
   body {
@@ -204,3 +243,4 @@ article.page pre {
     width: 80%;
   }
 }
+
