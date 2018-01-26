@@ -7,7 +7,7 @@
 
     <div class="card-row">
 
-      {{ range sort .Data.Pages "Title" }}
+      {{ range sort (where .Data.Pages "Params.archived" "!=" "true") "Title"}}
       <div class="card">
          <h2>{{ .Title }}</h2>
          <!--
