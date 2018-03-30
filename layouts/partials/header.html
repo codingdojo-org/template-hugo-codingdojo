@@ -2,30 +2,12 @@
     <h1><a href=/>Coding Dojo</a></h1>
     <nav>
       <ul>
-        {{ $dojo := (where .Site.RegularPages "Section" "==" "dojo") }}
-        {{ if gt $dojo 0 }}
-        <li><a href="{{ .LanguagePrefix }}/dojo">Dojo</a></li>
-        {{ end }}
-
-        {{ $kata := (where .Site.RegularPages "Section" "==" "kata") }}
-        {{ if gt $kata 0 }}
-        <li><a href="{{ .LanguagePrefix }}/kata">Kata</a></li>
-        {{ end }}
-
-        {{ $people := (where .Site.RegularPages "Section" "==" "people") }}
-        {{ if gt $people 0 }}
-        <li><a href="{{ .LanguagePrefix }}/people">People</a></li>
-        {{ end }}
-
-        {{ $record := (where .Site.RegularPages "Section" "==" "record") }}
-        {{ if gt $record 0 }}
-        <li><a href="{{ .LanguagePrefix }}/record">Record</a></li>
-        {{ end }}
-
-        {{ $solution := (where .Site.RegularPages "Section" "==" "solution") }}
-        {{ if gt $solution 0 }}
-        <li><a href="{{ .LanguagePrefix }}/solution">Solution</a></li>
-        {{ end }}
+        {{- $currentPage := . -}}
+        {{ range .Site.Menus.main -}}
+        <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+          <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+        </li>
+        {{- end }}
       </ul>
     </nav>
 </header>

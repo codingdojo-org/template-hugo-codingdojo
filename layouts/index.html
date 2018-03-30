@@ -5,12 +5,8 @@
   {{ partial "header" . }}
   <article class="page">
     <div class="content">
-    {{ range .Data.Pages }}
-      {{if eq .Type "index" }}
-        {{.Content}}
-      {{end}}
-    {{ end }}
-  </div>
+      {{.Content}}
+    </div>
   </article>
   {{ partial "footer" . }}
 </body>
