@@ -1,5 +1,8 @@
 <header class="top">
+  <div class="top-left">
     <h1><a href=/>Coding Dojo</a></h1>
+    {{ partial "breadcrumb" . }}
+  </div>
     <nav>
       <ul>
         {{- $currentPage := . -}}

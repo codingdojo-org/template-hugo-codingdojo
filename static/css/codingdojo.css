@@ -103,6 +103,46 @@ header.top h1 a {
   text-decoration: none;
 }
 
+.top-left {
+  display: flex;
+}
+
+.top-left ol {
+  margin-top: 39px;
+  height: 2em;
+}
+
+.top-left a {
+  color: #f2f3f4;
+}
+
+/************* Breadcrumbs *****************/
+
+.breadcrumb {
+  list-style-type: none;
+  display: flex;
+}
+
+.breadcrumb > li {
+  padding: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.breadcrumb > li a {
+  text-decoration: none;
+}
+
+.breadcrumb > li a::before {
+  content: "‣";
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.breadcrumb li:first-child {
+  display: none;
+}
+
 /************* github ribbon *******************/
 .top-right-corner {
   position: absolute;
