@@ -51,6 +51,11 @@ a {
   line-height: 2em;
 }
 
+.card > h2 > a {
+  color: #f2f3f4;
+  text-decoration: none;
+}
+
 .card > .content {
   text-align: justify;
   padding: 10px;

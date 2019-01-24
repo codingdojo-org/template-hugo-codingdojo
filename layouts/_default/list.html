@@ -9,18 +9,13 @@
 
       {{ range sort (where .Data.Pages "Params.archived" "!=" "true") "Title"}}
       <div class="card">
-         <h2>{{ .Title }}</h2>
-         <!--
-           <div class="content">
-             {{ printf "%s" .Summary | markdownify }}
-           </div>
-         -->
-          <div class="content">
-            {{ .Summary }}
-          </div>
-          <div class="card-footer">
-              <a href="{{ .Permalink }}" class="button">read more</a>
-          </div>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div class="content">
+          {{ .Summary }}
+        </div>
+        <div class="card-footer">
+          <a href="{{ .Permalink }}" class="button">read more</a>
+        </div>
       </div>
       {{ end }}
 
