@@ -1,14 +1,11 @@
 <header class="main-header">
     <h1><a href=/>Coding Dojo</a></h1>
-    <div class="main-header__breadcrumb">
-      {{ partial "breadcrumb" . }}
-    </div>
     <nav class="main-header__nav main-nav">
       <ul class="main-nav__list">
         {{- $currentPage := . -}}
         {{ range .Site.Menus.main -}}
-        <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-          <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+        <li class="main-nav__item{{ if $currentPage.IsMenuCurrent "main" . }} main-nav__item--active{{ end }}">
+          <a href="{{ .URL | absLangURL }}" class="main-nav__link">{{ .Name }}</a>
         </li>
         {{- end }}
       </ul>
