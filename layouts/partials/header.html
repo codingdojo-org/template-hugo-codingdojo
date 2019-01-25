@@ -1,10 +1,10 @@
-<header class="top">
-  <div class="top-left">
+<header class="main-header">
     <h1><a href=/>Coding Dojo</a></h1>
-    {{ partial "breadcrumb" . }}
-  </div>
-    <nav>
-      <ul>
+    <div class="main-header__breadcrumb">
+      {{ partial "breadcrumb" . }}
+    </div>
+    <nav class="main-header__nav main-nav">
+      <ul class="main-nav__list">
         {{- $currentPage := . -}}
         {{ range .Site.Menus.main -}}
         <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
